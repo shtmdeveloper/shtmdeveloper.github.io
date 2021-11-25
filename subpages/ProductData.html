@@ -111,7 +111,7 @@
 			rst.push("$(function(){");
 			rst.push("function inlineToDisplay(){");
 			rst.push("  if($.browser.msie){");
-			rst.push("    var $imgs = $('#P" + layerId + "').find('img.img_lazy_load');");
+			rst.push("    var $imgs = $('#" + layerId + "').find('img.img_lazy_load');");
 			rst.push("    if($imgs.length > 0){");
 			rst.push("      var nwidth = $._parseFloat('280'),");
 			rst.push("      ihack = (nwidth && ($.browser.version<9) && ('Proportion'=='210'))?true:false;");

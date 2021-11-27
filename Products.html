@@ -793,11 +793,12 @@
 						}
 						$(function () {
 							let ifr = document.getElementById("GetProductDataLib");
-							if ($.browser.msie){
+							ifr.onreadystatechange = LoadDataByIE();
+							/*if ($.browser.msie){
 								ifr.onreadystatechange = LoadDataByIE();
 							}else{
 								ifr.onload=LoadData();
-							}
+							}*/
 						});
 					</script>
 				</div>

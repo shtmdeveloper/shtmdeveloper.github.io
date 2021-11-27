@@ -711,35 +711,7 @@
 								duration: 200,//回到顶部的速度时间
 								targetObg: "body"//目标位置
 							};
-						});
-						$(function () {
-							$('<a href="#none" class="gototop_backToTop" title="返回顶部">返回顶部</a>').appendTo("body");
-						});
-
-						$(function () {
-							$(".gototop_backToTop").goToTopijs();
-							var $scroll_container = $(window).add('#scroll_container');
-							$scroll_container.bind('scroll resize', function () {
-								$(".gototop_backToTop").goToTopijs({
-									pageWidth: 960,
-									duration: 0
-								});
-							});
-						});
-
-					</script>
-					<!--gototop js end-->
-				</div>
-				<script>				 $('#layer14').triggerHandler('layer_ready');</script>
-				<div id='PanelX' type='product_list' class='cstlayer'
-					style='left: 230px; top: 773px; position: absolute; z-index: 104; width: 970px; height: 1366px;'
-					mid="" deg='0'>
-					<div class="wp-product_content wp-product_list_content"
-						style="border: 0px solid transparent; overflow: hidden; width: 970px; height: 1366px; padding: 0px;">
-						
-					</div>
-					<script language="javascript">				
-						$(function () {
+							//页面加载好后，加载数据
 							var pageskips = '2';
 							var layerid = "PanelX", prediv = $('#' + layerid);
 							var ifr = document.getElementById("GetProductDataLib");
@@ -783,10 +755,32 @@
 									this_dom.find(".wp-pager_link").css({ 'position': 'absolute', 'bottom': '0px', 'width': '100%' })
 								}
 							}
-							
-
 						});
+						$(function () {
+							$('<a href="#none" class="gototop_backToTop" title="返回顶部">返回顶部</a>').appendTo("body");
+						});
+
+						$(function () {
+							$(".gototop_backToTop").goToTopijs();
+							var $scroll_container = $(window).add('#scroll_container');
+							$scroll_container.bind('scroll resize', function () {
+								$(".gototop_backToTop").goToTopijs({
+									pageWidth: 960,
+									duration: 0
+								});
+							});
+						});
+
 					</script>
+					<!--gototop js end-->
+				</div>
+				<script>				 $('#layer14').triggerHandler('layer_ready');</script>
+				<div id='PanelX' type='product_list' class='cstlayer'
+					style='left: 230px; top: 773px; position: absolute; z-index: 104; width: 970px; height: 1366px;'
+					mid="" deg='0'>
+					<div class="wp-product_content wp-product_list_content"
+						style="border: 0px solid transparent; overflow: hidden; width: 970px; height: 1366px; padding: 0px;">
+					</div>
 				</div>
 
 				<div id='layer15' type='box' class='cstlayer'

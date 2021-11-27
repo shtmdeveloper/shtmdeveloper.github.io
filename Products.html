@@ -785,20 +785,16 @@
 							}
 						}
 
-						function LoadDataByIE()
-						{
-							if(document.readyState == "complete") {
-								LoadData();
-							} 
-						}
 						$(function () {
-							let ifr = document.getElementById("GetProductDataLib");
-							ifr.onreadystatechange = LoadDataByIE();
-							/*if ($.browser.msie){
-								ifr.onreadystatechange = LoadDataByIE();
-							}else{
-								ifr.onload=LoadData();
-							}*/
+							let iframe = document.getElementById("GetProductDataLib");
+							if (iframe.attachEvent){
+									iframe.attachEvent("onload", function(){LoadData();});
+							} else {
+								iframe.onload = function(){
+									LoadData();
+								}
+							}
+							//setTimeout(function () {LoadData();	}, 1000);
 						});
 					</script>
 				</div>

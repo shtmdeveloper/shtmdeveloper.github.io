@@ -786,15 +786,7 @@
 						}
 
 						$(function () {
-							let iframe = document.getElementById("GetProductDataLib");
-							if (iframe.attachEvent){
-									iframe.attachEvent("onload", function(){LoadData();});
-							} else {
-								iframe.onload = function(){
-									LoadData();
-								}
-							}
-							//setTimeout(function () {LoadData();	}, 1000);
+							setTimeout(function () {LoadData();}, 1000);
 						});
 					</script>
 				</div>

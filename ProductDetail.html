@@ -1012,12 +1012,13 @@
 								<div class="prdview_prev_next">
 									<div style="margin-top:20px;width:100%;">
 										<div class="prevlist">
-											<a class="prev_next_link" style="display:block;float:left;"></a>
+											<a class="prev_next_link" style="display:block;float:left;">
+												<span class="up_arrow"></span><span class="prev_next_text prev_txt"	style="display:block;float:left;margin-right: 5px;">上一个： </span><span id="PrvProduct"></span></a>
 											<div style="clear:both;"></div>
 										</div>
 										<div class="nextlist">
 											<a class="prev_next_link" style="display:block;float:left;">
-												</a>
+												<span class="down_arrow"></span><span class="prev_next_text prev_txt"	style="display:block;float:left;margin-right: 5px;">下一个： </span><span id="NxtProduct"></span></a>
 											<div style="clear:both;"></div>
 										</div>
 									</div>
@@ -1679,11 +1680,38 @@
 		if ($._wp_previewimgmode) {
 			$('.cstlayer img.img_lazy_load').trigger('appear');
 		}
+/*
+		function getproductData() {
+			let lst = new Array();
+			lst.push({ "id": "101", "name": "环保纱", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "102", "name": "JB4039", "Img": "bqp3.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "JB4039-Model.jpg|800X760,JB4039-1.jpg|800X800,JB4039-2.jpg|800X800" });
+			lst.push({ "id": "103", "name": "JBNC3528F-A", "Img": "nx4q.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "104", "name": "JBN5512F", "Img": "TB2Hj84tVXXXXbTXpXXXXXXXXXX_!!2901027564.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "105", "name": "JBNC5539F", "Img": "xk0c.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "106", "name": "JBP3689F", "Img": "grkk.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "107", "name": "JBP5100-3", "Img": "T1VJ7LFg4aXXXXXXXX_!!0-item_pic.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "108", "name": "JBC7356F", "Img": "JBC7356F.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "109", "name": "JBN1902S", "Img": "JBN1902S_w8wo.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "110", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "111", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "112", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "113", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "114", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "115", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "116", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "117", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "118", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "119", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "100", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "201", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "200", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			lst.push({ "id": "202", "name": "WBN3612U", "Img": "14488739569_1629538629.jpg", "category": "200", "Remark": "尼龙10D轻薄面料，纹路清晰，布面光泽感高级，手感滑爽轻柔，是一款舒适时尚面料。", "images": "1,2,3" });
+			return lst;
+		}*/
 		
 		function loadData(){
 			let ifr = document.getElementById("GetProductDataLib");
 			let win = ifr.window || ifr.contentWindow;
 			var productData = win.productData;
+			//var productData = getproductData();
 
 			var productId = getParam("product_id");
 			if (productId=="") return;
@@ -1704,14 +1732,16 @@
 			//上一个 
 			if (idx>0){
 				obj = productData[idx-1];
-				$("#layer17").find('.prevlist').find('.prev_next_link').attr('href','./ProductDetail.html?product_id='+obj.id).attr('title',obj.name).html("<span class=\"up_arrow\"></span><span class=\"prev_next_text prev_txt\"	style=\"display:block;float:left;margin-right: 5px;\">上一个： </span>"+obj.name);
+				$("#layer17").find('.prevlist').find('.prev_next_link').attr('href','./ProductDetail.html?product_id='+obj.id).attr('title',obj.name);
+				$("#PrvProduct").html(obj.name);
 			}else{
 				$("#layer17").find('.prevlist').attr('display','none');
 			}
 			//下一个
 			if (idx<productData.length-1){
 				obj = productData[idx+1];
-				$("#layer17").find('.nextlist').find('.prev_next_link').attr('href','./ProductDetail.html?product_id='+obj.id).attr('title',obj.name).html("<span class=\"down_arrow\"></span><span class=\"prev_next_text next_txt\" style=\"display:block;float:left;margin-right: 5px;\">下一个：</span>"+obj.name);
+				$("#layer17").find('.nextlist').find('.prev_next_link').attr('href','./ProductDetail.html?product_id='+obj.id).attr('title',obj.name);
+				$("#NxtProduct").html(obj.name);
 			}else{
 				$("#layer17").find('.nextlist').attr('display','none');
 			}
@@ -1725,7 +1755,8 @@
 		}
 
 		$(function () {
-			setTimeout(function () {loadData();}, 1000);
+			loadData();
+			//setTimeout(function () {loadData();}, 0);
 		});
 	</script>
 	<script>

@@ -745,7 +745,7 @@
 							var pageskips = '2';
 							var layerid = "PanelX", prediv = $('#' + layerid);
 							let ifr = document.getElementById("GetProductDataLib");
-							let win = ifr.window || ifr.contentWindow;;
+							let win = ifr.window || ifr.contentWindow;
 							let data = win.GetProductContent(categoryId,1);
 							//var data = GetProductContent(categoryId, 1);
 							prediv.children('.wp-product_list_content').before(data).remove();

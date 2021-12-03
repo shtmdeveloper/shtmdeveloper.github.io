@@ -1717,15 +1717,15 @@
 			}
 
 			function getProductIdx(id){
-			for (let i = 0, l = productData.length; i < l; i++) {
-					if (productData[i].id == id) return i;
+				for (let i = 0, l = productData.length; i < l; i++) {
+						if (productData[i].id == id) return i;
+				}
+				reurn -1;
 			}
-			reurn -1;
-		}
 		}
 
 		$(function () {
-			setTimeout(function () {loadData();}, 500);
+			setTimeout(function () {loadData();}, 1000);
 		});
 	</script>
 	<script>
